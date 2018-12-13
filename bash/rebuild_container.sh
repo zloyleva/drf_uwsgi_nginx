@@ -1,10 +1,10 @@
 #!/bin/bash
 project_prefix=${PWD##*/} 
 
-imageName=${project_prefix}-img
+imageName=python:3.6-stretch
 containerName=${project_prefix}-container
 
-docker build $imageName -f Dockerfile  .
+docker build .
 
 echo Delete old container...
 docker rm -f $containerName
