@@ -1,0 +1,6 @@
+2018-12-13 20:37:57,975 CRIT Set uid to user 0
+2018-12-13 20:37:57,977 INFO supervisord started with pid 1
+2018-12-13 20:37:58,980 INFO spawned: 'nginx' with pid 12
+2018-12-13 20:37:58,984 INFO spawned: 'uwsgi' with pid 13
+2018-12-13 20:38:00,021 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-12-13 20:38:00,022 INFO success: uwsgi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
