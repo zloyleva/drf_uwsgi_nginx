@@ -10,4 +10,4 @@ echo $containerName
 sudo docker build $imageName -f Dockerfile  .
 
 echo Run new container...
-sudo docker run -d -it -p 80:80 --name=$containerName $imageName -v ${project_prefix}/app:/app/
+sudo docker run -d -it -p 80:80 --name=$containerName -v ${PWD}/app:/app/ $imageName
