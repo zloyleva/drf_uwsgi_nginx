@@ -1,13 +1,11 @@
 #!/bin/bash
 project_prefix=${PWD##*/} 
+project_dir=${PWD}/app/
 
-imageName=python:3.6-stretch
+imageName=${project_prefix}_drf
 containerName=${project_prefix}-container
 
-echo $imageName
-echo $containerName
-
-sudo docker build .
+docker build -t ${imageName} .
 
 echo Run new container...
-sudo docker run -d -it -p 80:80 --name=$containerName -v ${PWD}/app:/app/ $imageName
+sudo docker run -d -p 80:80 --name=$containerName -v ${project_dir}:/app/ ${imageName}

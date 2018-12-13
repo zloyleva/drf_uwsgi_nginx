@@ -2,13 +2,13 @@
 project_prefix=${PWD##*/} 
 project_dir=${PWD}/app/
 
-imageName=python:3.6-stretch
+imageName=${project_prefix}_drf
 containerName=${project_prefix}-container
 
-docker build .
+docker build -t ${imageName} .
 
 echo Delete old container...
 docker rm -f $containerName
 
 echo Run new container...
-sudo docker run -d -it -p 80:80 --name=$containerName -v ${project_dir}:/app/ $imageName
+sudo docker run -d -p 80:80 --name=$containerName -v ${project_dir}:/app/ ${imageName}

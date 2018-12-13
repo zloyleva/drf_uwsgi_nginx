@@ -16,6 +16,7 @@ rebuild: #build docker container #
 connect: #build docker container #
 	@sudo bash/connect.sh
 
+#Be careful for use it commands!!
 remove_all_containers: #remove all docker containers
 	@sudo bash/remove_all_containers.sh
 
