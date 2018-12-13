@@ -2,4 +2,4 @@
 project_prefix=${PWD##*/} 
 containerName=${project_prefix}-container
 
-sudo docker start $containerName
+sudo docker exec -it ${containerName} bash

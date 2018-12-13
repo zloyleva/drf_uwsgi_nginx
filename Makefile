@@ -13,6 +13,9 @@ stop: #build docker container #
 rebuild: #build docker container #
 	@sudo bash/rebuild_container.sh
 
+connect: #build docker container #
+	@sudo bash/connect.sh
+
 remove_all_containers: #remove all docker containers
 	@sudo bash/remove_all_containers.sh
 
